@@ -9,25 +9,7 @@
 
 ---
 
-next-movies/
-├── app/
-│   ├── page.tsx                 # Homepage (main route)
-│   └── components/
-│       ├── MovieCard.tsx        # Flip-style movie card component
-│       └── MovieSearch.tsx      # Search input + results grid
-├── public/
-│   └── img/
-│       ├── cinema.jpg           # Background image
-│       └── noContent.png        # Fallback image when poster is missing
-├── utils/
-│   └── axiosConfig.ts           # Axios instance with TMDB config
-├── .env                         # Your TMDB API Bearer token
-├── .gitignore                   # Common ignored files
-├── README.md                    # Project documentation
-├── next.config.js               # Next.js configuration
-├── tailwind.config.ts           # Tailwind CSS config
-├── tsconfig.json                # TypeScript config
-├── package.json                 # Project dependencies and scripts
+<pre> ``` 📦 next-movies ├── 📁 app │ ├── 📄 page.tsx → Main route (homepage) │ └── 📁 components │ ├── 📄 MovieCard.tsx → Movie card UI │ └── 📄 MovieSearch.tsx → Search form and results ├── 📁 public │ └── 📁 img │ ├── 🖼️ cinema.jpg → Background image │ └── 🖼️ noContent.png → Fallback image ├── 📁 utils │ └── 📄 axiosConfig.ts → Axios setup for TMDB API ├── 📄 .env → Your TMDB API Bearer token (not committed) ├── 📄 .gitignore ├── 📄 README.md ├── 📄 next.config.js ├── 📄 tailwind.config.ts ├── 📄 tsconfig.json ├── 📄 package.json ``` </pre>
 
 ---
 
