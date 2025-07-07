@@ -40,7 +40,7 @@ export default function MovieCard({ movie }: MovieCardProps) {
 				<div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] rounded-xl bg-[#1e272e] text-white flex justify-center items-center shadow-md">
 					<div className="text-center px-4 max-w-[90%]">
 						<h3 className="text-xl font-bold mb-2">{movie.title}</h3>
-							<p className="text-sm text-gray-300 leading-snug line-clamp-6 mb-2"> Descrição: {movie.overview}</p>
+						<p className="text-sm text-gray-300 leading-snug line-clamp-6 mb-2"> Descrição: {!movie.overview ? "N/A" : movie.overview}</p>
 						<p className="text-sm text-gray-400"> Popularidade: ❤️ {formatValue(movie.popularity)}</p>
 					</div>
 				</div>

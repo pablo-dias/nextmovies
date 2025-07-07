@@ -1,4 +1,10 @@
+import { Metadata } from "next";
 import MovieSearch from "./components/MovieSearch/MovieSearch";
+
+export const metadata: Metadata = {
+	title: "Next Movies",
+	description: "Relembre filmes ou séries que marcaram sua vida!"
+}
 
 export default function Home() {
 	return (
@@ -8,7 +14,7 @@ export default function Home() {
 					🎬 Next Movies 🍿
 				</h1>
 
-				<p className=" text-center text-gray-300 mb-10 text-lg">Relembre filmes ou séries que marcou sua vida!</p>
+				<p className=" text-center text-gray-300 mb-10 text-lg">Relembre filmes ou séries que marcaram sua vida!</p>
 				<MovieSearch />
 			</div>
 		</div>
