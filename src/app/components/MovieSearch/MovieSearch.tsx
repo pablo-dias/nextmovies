@@ -2,13 +2,28 @@
 
 import { useState } from "react";
 import axiosConfig from "@/utils/axiosConfig";
-import MovieCard from "../MovieCard/page";
+import MovieCard from "../MovieCard/MovieCard";
 
 export default function MovieSearch() {
+
+    interface MovieCardProps {
+        movie: {
+            title: string;
+            overview: string;
+            poster_path: string | null;
+            release_date: string;
+            popularity: number;
+            vote_average: number;
+        };
+    }
+
+
     const [query, setQuery] = useState("");
     const [results, setResults] = useState([]);
     const [loading, setLoading] = useState(false);
     const [hasSearched, setHasSearched] = useState(false);
+    type Movie = MovieCardProps["movie"];
+
 
     const handleSearch = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -50,7 +65,7 @@ export default function MovieSearch() {
                 <p className="text-center text-gray-300 text-lg">Carregando...</p>
             ) : hasSearched && results.length === 0 ? (
                 <p className="text-center text-gray-400 text-sm mb-10">
-                    No results found for <span className="font-semibold">"{query}"</span>
+                    Nenhum resultado encontrado para <span className="font-semibold">&quot;{query}&quot;</span>
                 </p>
             ) : !hasSearched ? (
                 <div className="bg-gray-500/60 w-full h-[500px] rounded-lg flex items-center justify-center">
@@ -58,8 +73,8 @@ export default function MovieSearch() {
                 </div>
             ) : (
                 <div className="grid place-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {results.map((movie: any) => (
-                        <MovieCard key={movie.id} movie={movie} />
+                    {results.map((movie: Movie) => (
+                        <MovieCard key={movie.title + movie.release_date} movie={movie} />
                     ))}
                 </div>
             )}
