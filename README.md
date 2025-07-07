@@ -9,10 +9,6 @@
 
 ---
 
-<pre> ``` 📦 next-movies ├── 📁 app │ ├── 📄 page.tsx → Main route (homepage) │ └── 📁 components │ ├── 📄 MovieCard.tsx → Movie card UI │ └── 📄 MovieSearch.tsx → Search form and results ├── 📁 public │ └── 📁 img │ ├── 🖼️ cinema.jpg → Background image │ └── 🖼️ noContent.png → Fallback image ├── 📁 utils │ └── 📄 axiosConfig.ts → Axios setup for TMDB API ├── 📄 .env → Your TMDB API Bearer token (not committed) ├── 📄 .gitignore ├── 📄 README.md ├── 📄 next.config.js ├── 📄 tailwind.config.ts ├── 📄 tsconfig.json ├── 📄 package.json ``` </pre>
-
----
-
 ## 🚀 Features
 
 - 🔎 Real-time movie & TV show search using the [TMDB API](https://www.themoviedb.org/documentation/api)
