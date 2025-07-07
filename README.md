@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎬 Next Movies 🍿
 
-## Getting Started
+> Relembre filmes ou séries que marcaram sua vida!
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-13+-black?logo=nextdotjs)
+![TypeScript](https://img.shields.io/badge/TypeScript-blue?logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-38bdf8?logo=tailwindcss)
+![TMDB API](https://img.shields.io/badge/TMDB-API-01B4E4?logo=themoviedatabase)
+
+---
+
+app/
+├─ page.tsx             # Home page
+├─ components/
+│  ├─ MovieCard.tsx     # Card flip UI
+│  └─ MovieSearch.tsx   # Search form and results
+├─ utils/
+│  └─ axiosConfig.ts    # Axios config for TMDB API
+public/
+├─ img/                 # Static images (cinema background, fallback poster)
+
+---
+
+## 🚀 Features
+
+- 🔎 Real-time movie & TV show search using the [TMDB API](https://www.themoviedb.org/documentation/api)
+- 🌆 Responsive, mobile-first UI with Tailwind CSS
+- 💡 Hover-flip cards for detailed info
+- 🌐 Search localized in Portuguese (`pt-BR`)
+- 🧠 Built with Next.js App Router and TypeScript
+
+---
+
+## 🛠️ Tech Stack
+
+- [Next.js 13+](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [TMDB API](https://developers.themoviedb.org/3)
+
+---
+
+## 📦 Installation
 
 ```bash
+# 1. Clone the repository
+git clone https://github.com/your-username/next-movies-app.git
+cd next-movies-app
+
+# 2. Install dependencies
+npm install
+
+# 3. Create a .env file and add your TMDB API token
+echo "NEXT_PUBLIC_API_KEY=your_tmdb_bearer_token" > .env
+
+# 4. Run the app locally
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
